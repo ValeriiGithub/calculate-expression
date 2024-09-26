@@ -34,7 +34,7 @@ docker run --rm calculate_expression_app
 
 ## Дополнение 
 
-Для того, чтобы контейнер запускал программу (функцию calculate_expression), а не только тесты, нееобходимо изменить команду CMD в Dockerfile на вроде:
+Для того, чтобы контейнер запускал программу (функцию calculate_expression), а не только тесты, необходимо изменить команду CMD в Dockerfile на:
 
 ```dockerfile
 CMD ["python", "main.py"]
