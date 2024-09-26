@@ -35,3 +35,14 @@ def calculate_expression(expression: str) -> int:
     # Добавляем последнее число к результату
     result += sign * current_number
     return result
+
+
+# Примеры использования
+try:
+    print(calculate_expression("1+2+3+4"))      # Вывод: 10
+    print(calculate_expression("10-2+3-4"))     # Вывод: 7
+    print(calculate_expression("15+25-10+5"))   # Вывод: 35
+    print(calculate_expression("100-50+25-75")) # Вывод: 0
+    print(calculate_expression("10+2a-3"))      # Вывод: ValueError
+except ValueError as e:
+    print(f"Ошибка: {e}")
