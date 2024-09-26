@@ -3,6 +3,13 @@ from functools import lru_cache
 
 @lru_cache(maxsize=None)  # Неограниченный размер кэша
 def calculate_expression(expression: str) -> int:
+    """
+    Функция calculate_expression принимает строку, представляющую арифметическое выражение,
+    содержащее только знаки + и -, и возвращает результат этого выражения.
+    Функция обрабатывает как однозначные, так и многозначные числа.
+    :param expression: str
+    :return: int
+    """
     # Проверка на некорректные данные
     if not expression or expression[0] in '+-' or expression[-1] in '+-':
         raise ValueError("Входная строка должна содержать только цифры, знаки '+' и '-'.")
